@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #761ee9;
+}
+body {
+  user-select: none;
+  height: 100vh;
+  background-color: #ddd;
+  position: relative;
+}
+/* ff8d8d */
+.container {
+  max-width: 992px;
+  padding-bottom: 30px;
+  margin: auto;
+}
+.container .info-bar {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 2px solid #fff;
+}
+.container .info-bar h2 {
+  font-family: "Silkscreen", cursive;
+}
+.container .info-bar span > .category {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 18px;
+}
+.container .content {
+  display: flex;
+  min-height: 400px;
+}
+.container .content .carnage,
+.container .content .letters {
+  flex: 1;
+  min-height: 100%;
+}
+.container .content .carnage {
+  background-color: #fff;
+  margin: 10px;
+}
+.container .content .carnage .draw {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+.container .content .carnage .trick {
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fafafac7;
+  display: none;
+}
+.container .content .carnage:hover .trick {
+  display: flex;
+}
+.container .content .carnage .draw span {
+  display: block;
+}
+.container .content .carnage .draw .stand-land {
+  width: 60px;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  bottom: 30px;
+  margin-left: -100px;
+  display: none;
+}
+.container .content .carnage .draw .stand-body {
+  width: 4px;
+  height: 300px;
+  background-color: #000;
+  position: absolute;
+  bottom: 30px;
+  margin-left: -100px;
+  display: none;
+}
+.container .content .carnage .draw .stand-holder-t {
+  width: 100px;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  top: 60px;
+  display: none;
+}
+.container .content .carnage .draw .stand-holder-b {
+  width: 4px;
+  height: 50px;
+  background-color: #000;
+  position: absolute;
+  top: 60px;
+  right: 193px;
+  display: none;
+}
+.container .content .carnage .draw .man .gallows {
+  width: 80px;
+  height: 80px;
+  border: 5px dashed #000;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  top: 105px;
+  right: 160px;
+  display: none;
+}
+.container .content .carnage .draw .man .head-man {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #000;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  top: 120px;
+  right: 175px;
+  display: none;
+}
+.container .content .carnage .draw .man .body-man {
+  width: 4px;
+  height: 130px;
+  background-color: #000;
+  position: absolute;
+  top: 165px;
+  right: 198px;
+  display: none;
+}
+.container .content .carnage .draw .man .hands-man {
+  display: none;
+}
+.container .content .carnage .draw .man .hands-man::before {
+  content: "";
+  position: absolute;
+  top: 209px;
+  right: 143px;
+  width: 60px;
+  height: 4px;
+  background-color: #000;
+  transform: rotate(-25deg);
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+}
+.container .content .carnage .draw .man .hands-man::after {
+  content: "";
+  position: absolute;
+  top: 210px;
+  right: 195px;
+  width: 60px;
+  height: 4px;
+  background-color: #000;
+  transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -o-transform: rotate(25deg);
+}
+.container .content .carnage .draw .man .foot-man {
+  display: none;
+}
+.container .content .carnage .draw .man .foot-man::before {
+  content: "";
+  position: absolute;
+  top: 309px;
+  right: 148px;
+  width: 60px;
+  height: 4px;
+  background-color: #000;
+  transform: rotate(-125deg);
+  -webkit-transform: rotate(-140deg);
+  -moz-transform: rotate(-125deg);
+  -ms-transform: rotate(-125deg);
+  -o-transform: rotate(-125deg);
+}
+.container .content .carnage .draw .man .foot-man::after {
+  content: "";
+  position: absolute;
+  top: 309px;
+  right: 190px;
+  width: 60px;
+  height: 4px;
+  background-color: #000;
+  transform: rotate(140deg);
+  -webkit-transform: rotate(140deg);
+  -moz-transform: rotate(140deg);
+  -ms-transform: rotate(140deg);
+  -o-transform: rotate(140deg);
+}
+
+.container .content .carnage .draw.wrong-1 .stand-land {
+  display: block;
+}
+
+.container .content .carnage .draw.wrong-2 .stand-body {
+  display: block;
+}
+
+.container .content .carnage .draw.wrong-3 .stand-holder-t,
+.container .content .carnage .draw.wrong-3 .stand-holder-b {
+  display: block;
+}
+
+.container .content .carnage .draw.wrong-4 .gallows {
+  display: block;
+}
+
+.container .content .carnage .draw.wrong-5 .head-man {
+  display: block;
+}
+
+.container .content .carnage .draw.wrong-6 .body-man {
+  display: block;
+}
+
+.container .content .carnage .draw.wrong-7 .hands-man {
+  display: block;
+}
+
+.container .content .carnage .draw.wrong-8 .foot-man {
+  display: block;
+}
+.container .content .letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.container .content .letters span {
+  margin: 5px 8px;
+  width: 50px;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+}
+.container .content .letters span.lost {
+  background-color: #ff00004b;
+}
+.container .content .letters span.display {
+  background-color: #b9b9b9;
+  pointer-events: none;
+}
+.word-prediction {
+  min-height: fit-content;
+  padding: 30px 0;
+  margin: 10px;
+  background-color: #fff;
+}
+.word-prediction .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+}
+.word-prediction .box span:not(.space) {
+  position: relative;
+  width: 50px;
+  height: 55px;
+  margin: 0 15px 10px 0;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+.word-prediction .box span.win:not(.space) {
+  border-bottom: none;
+}
+.word-prediction .box span.space {
+  position: relative;
+  width: 50px;
+  height: 55px;
+  font-size: 3rem;
+  margin: 0 15px 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.word-prediction .box span.space::before {
+  content: "-";
+}
+.word-prediction .box span.Full {
+  color: #fff;
+  z-index: 1;
+}
+.word-prediction .box span.Full:not(.space):before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  animation: toTop 0.3s linear forwards;
+  -webkit-animation: toTop 0.3s linear forwards;
+  z-index: -1;
+}
+.word-prediction .box span.win:not(.space):before {
+  background-color: green;
+  border: none;
+}
+@keyframes toTop {
+  0% {
+    height: 0%;
+    color: var(--main-color);
+  }
+  100% {
+    height: 100%;
+  }
+}
+.msgLost {
+  width: 100%;
+  height: 100vh;
+  background-color: #761ee9d8;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 4rem;
+  z-index: 1000;
+  font-weight: bold;
+}
+.msgLost .again {
+  max-width: 160px;
+  height: 60px;
+  background-color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-top: 60px;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .container .info-bar {
+    flex-direction: column;
+  }
+  .container .info-bar h2 {
+    margin-bottom: 20px;
+  }
+  .container .content {
+    flex-direction: column;
+  }
+  .container .content .carnage {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
